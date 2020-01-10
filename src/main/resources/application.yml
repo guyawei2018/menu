@@ -1,0 +1,26 @@
+server:
+  port: 6010
+
+spring:
+  application:
+    name: MENU-MANAGEMENT
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://guyw.top:13306/menu_manage?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai&useSSL=false
+      username: root
+      password: root
+      max-active: 10
+      initial-size: 5
+      min-idle: 2
+      max-wait: 60000
+      pool-prepared-statements: true
+      web-stat-filter:
+        enabled: true
+        url-pattern: /druid
+logging:
+  level:
+    com.lanswon.*: debug
+  path: /log/menu
+mybatis:
+  mapper-locations: classpath:/mybatis-mapper/*.xml
