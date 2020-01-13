@@ -17,4 +17,4 @@ ARG JAR_FILE
 
 # jenkins打好的包 复制到 容器内,名称随便取
 COPY ${JAR_FILE}  menu.jar
-ENTRYPOINT ["java","-jar","/menu.jar"]
+ENTRYPOINT ["java","-jar","./menu.jar"]
