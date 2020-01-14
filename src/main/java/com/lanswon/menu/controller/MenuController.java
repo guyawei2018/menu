@@ -20,6 +20,7 @@ import javax.validation.Valid;
 @RequestMapping("/menu")
 @Api(tags="菜单管理")
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
+@CrossOrigin
 public class MenuController {
 
     private final MenuService menuService;
