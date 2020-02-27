@@ -1,5 +1,5 @@
 server:
-  port: 6010
+  port: 6011
 
 spring:
   application:
@@ -7,7 +7,7 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://guyw.top:13306/menu_manage?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai&useSSL=false
+      url: jdbc:mysql://192.168.44.78:3306/menu_manage?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai&useSSL=false
       username: root
       password: root
       max-active: 10
