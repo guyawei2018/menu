@@ -11,5 +11,6 @@
     <result column="use_status" jdbcType="INTEGER" property="useStatus" />
     <result column="crt_date" jdbcType="TIMESTAMP" property="crtDate" />
     <result column="last_date" jdbcType="TIMESTAMP" property="lastDate" />
+    <result column="need_login" jdbcType="TINYINT" property="needLogin"/>
   </resultMap>
 </mapper>

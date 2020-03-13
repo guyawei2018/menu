@@ -65,12 +65,17 @@ public class MenuServiceImpl implements MenuService {
     private SimpleResponse check(Menu menu){
         List<Menu> menus = menuMapper.selectAll();
         for(Menu m : menus){
-            if(m.getMenuName().equals(menu.getMenuName())||
-                    m.getMenuUrl().equals(menu.getMenuUrl())){
-                return SimpleResponse.builder()
-                        .status(HttpStatus.MULTIPLE_CHOICES.value())
-                        .description("菜单名或地址重复")
-                        .build();
+            if((m.getMenuName().equals(menu.getMenuName())||
+                    m.getMenuUrl().equals(menu.getMenuUrl()))){
+                if(menu.getId()!=null){
+                    if(menu.getId().intValue() != m.getId().intValue()){
+                        return SimpleResponse.builder()
+                                .status(HttpStatus.MULTIPLE_CHOICES.value())
+                                .description("菜单名或地址重复")
+                                .build();
+                    }
+                }
+
             }
         }
         return null;

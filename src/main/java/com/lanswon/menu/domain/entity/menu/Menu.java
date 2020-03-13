@@ -51,4 +51,7 @@ public class Menu {
     @Column(name = "last_date")
     @ApiModelProperty(hidden = true)
     private Date lastDate;
+
+    @Column(name = "need_login")
+    private boolean needLogin;
 }
